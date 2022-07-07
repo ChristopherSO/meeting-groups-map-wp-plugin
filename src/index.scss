@@ -1,0 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
+.page .wp-container-7 > :where(:not(.alignleft):not(.alignright)) {
+    max-width: none;
+}

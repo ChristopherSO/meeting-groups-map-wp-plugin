@@ -1,0 +1,75 @@
+@use '../variables' as *;
+
+.button {
+	min-height: 32px;
+    min-width: 96px;
+	border: 1px solid $accent-color;
+	border-radius: 16px;
+	background-color: white;
+	color: $accent-color;
+	padding: 4px;
+    padding-left: 16px;
+	padding-right: 34px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    text-transform: uppercase;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2381d742' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 16px center;
+	background-size: 11px 11px;
+	cursor: pointer;
+
+	&.open,
+	&:hover {
+		background-color: $accent-color;
+		color: white;
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	}
+}
+
+.mobile-layout .button {
+    padding-left: 12px;
+	padding-right: 30px;
+	background-position: right 12px center;
+    text-align: center;
+}
+
+.relative {
+	position: relative;
+}
+
+.backdrop {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+.dropdown {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: max-content;
+	background-color: white;
+	padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 15%);
+
+	label {
+		display: block;
+		padding-right: 4px;
+		cursor: pointer;
+
+		input {
+			margin-right: 8px;
+		}
+
+		& + label {
+			margin-top: 4px;
+		}
+	}
+}
